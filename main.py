@@ -91,14 +91,14 @@ def get_longest_sorted_asc(list):
     for i in range(len(list)):
         for j in range(i + 1, len(list)):
             if list[j - 1] < list[j]:
-                if j - i + 1 > maxim:
-                    maxim = j - i + 1
+                if j - i +1 > maxim:
+                    maxim = j - i+1
                     l = i
             else:
                 break
     for i in range(l, l + maxim):
-        rezu.append(list[i])
-        return rezu
+       rezu.append(list[i])
+    return rezu
 
 def test_get_longest_sorted_asc():
     assert get_longest_sorted_asc([1, 2, 3]) == [1, 2, 3]
